@@ -1,0 +1,64 @@
+.header{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 7vh;
+    background-color: rgb(255, 255, 255, 0.25);
+}
+.SearchInput{
+    width: 20vw;
+    background-color: #363636;
+    color: white;
+    border-radius: 15px;
+    height: 80%;
+}
+input{
+    margin-left: 1vw;
+    width:17vw;
+    outline: none;
+    background-color: transparent;
+    height: 100%;
+    border: none;
+}
+input:focus {
+    background-color: transparent;
+    outline:none;
+}
+::placeholder{
+    color: white;
+    opacity: 50%;
+}
+.HeaderBody{
+    width: 70vw;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.bi-house-door,.bi-cloud{
+    margin-left: 1vw;
+    margin-right: 1vw;
+}
+div.HeaderBody{
+    height: 100%;
+}
+div.HeaderBody:hover{
+    cursor: pointer;
+    background-color: transparent;
+}
+
+.UnitsCheck{
+    width: 10vw;
+
+}
+.UnitsCheckLinks{
+    padding: 5px;
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    background-color: rgb(255, 255, 255, 0.15);
+    border-radius: 5px;
+}
+.Linkactive{
+    background-color: rgb(255, 255, 255, 0.50);
+}

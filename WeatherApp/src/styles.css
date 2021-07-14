@@ -1,0 +1,10 @@
+/* You can add global styles to this file, and also import other style files */
+
+body,html
+{
+    font-family: Segoe UI, Segoe WP, Arial, Sans-Serif;
+    margin: 0;
+    background-image: url("assets/Mid8.png");
+    box-sizing: border-box;
+    
+}

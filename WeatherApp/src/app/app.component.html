@@ -1,0 +1,5 @@
+<app-header [State]="State" [Temparature]="Temparature" [City]="City" (CityChange)="CityChange($event)"></app-header>
+<app-weather-dashboard>
+    <p class="contentProjectData">{{ City}}, {{State}}, {{ country }}</p>
+    <p class="contentProjectDate">Updated as of {{updatedTime}}</p>
+</app-weather-dashboard>

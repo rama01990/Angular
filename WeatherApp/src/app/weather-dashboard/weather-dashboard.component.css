@@ -1,0 +1,33 @@
+.MainTemp{
+    display: flex;
+    width:100%;
+    height: auto;
+}
+
+.BigTemp{
+    font-size: 96px;
+    color: white;
+
+}
+.WeatherIcon{
+    width: 100px;
+    height: 100px;
+    margin-bottom: 75px;
+}
+.units{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding:0px;
+}
+a{
+    text-decoration: none;
+    color: white;
+    font-weight: bolder;
+    font-size: 50px;
+}
+.flexOrder{
+    order: 2;
+    font-weight: normal;
+    font-size: 40px;
+}
