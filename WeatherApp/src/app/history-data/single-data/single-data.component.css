@@ -1,0 +1,14 @@
+.childmain{
+    background-color: rgba(255,255,255,0.10);
+    padding: 10px 30px;
+    border-radius: 20px;
+    margin:5px;
+    color: white;
+}
+.MaxTemp{
+    font-size: 24px;
+    font-weight: bold;
+}
+.MinTemp{
+    font-size: 24px;
+}

@@ -5,15 +5,7 @@
     <p class="contentProjectDate">Updated as of {{updatedTime}}</p>
 </app-weather-dashboard>
 <app-weather-sub [WeatherSubData]="DashboardSubData"></app-weather-sub>
-</div>
-
-<!--
-    <div class="Submenu">
-    <div *ngFor=" let item of DashboardSubData">
-        works!
-    </div>
-</div>    
--->
 <button class='btn' (click)="hourlyRout()">Show me 10 days history</button>
 <!--<a [routerLink]="'/'">Hide hisyorical data</a> -->
 <router-outlet></router-outlet>
+</div>

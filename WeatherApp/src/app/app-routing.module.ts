@@ -1,11 +1,11 @@
-import { Component, NgModule } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { AppComponent } from './app.component';
+import { DataResolver } from './App-resolver.service';
 import { HistoryDataComponent } from './history-data/history-data.component';
 
 
 const routes: Routes = [
-  {path:'history', component: HistoryDataComponent}
+  {path:'history',runGuardsAndResolvers: 'paramsOrQueryParamsChange', component: HistoryDataComponent,resolve:{'AppHorlyData':DataResolver}}
 ];
 
 @NgModule({

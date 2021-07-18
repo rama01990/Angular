@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, OnDestroy } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { AppDataService } from '../App-Data.service';
 
@@ -7,7 +7,7 @@ import { AppDataService } from '../App-Data.service';
   templateUrl: './weather-dashboard.component.html',
   styleUrls: ['./weather-dashboard.component.css']
 })
-export class WeatherDashboardComponent implements OnInit {
+export class WeatherDashboardComponent implements OnInit,OnDestroy {
   isCelcius:boolean;
   subScription = new Subscription;
   @Input() messageText:string;
@@ -16,6 +16,10 @@ export class WeatherDashboardComponent implements OnInit {
     this.subScription=this.appDataService.UnitChange.subscribe(data =>{
       data === 'C' ? this.isCelcius=true : this.isCelcius=false;
     })
+  }
+
+  ngOnDestroy(){
+    this.subScription.unsubscribe()
   }
 
 }

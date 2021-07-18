@@ -3,7 +3,7 @@ import { Router } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { AccuRequestService } from './accu-request.service';
 import { AppDataService } from './App-Data.service';
-import { DataWeather } from './app.model';
+import { DataWeather, DataWeatherHistory, ArrayData } from './app.model';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -25,6 +25,8 @@ export class AppComponent implements OnInit , OnDestroy {
   updatedTime: string;
   country: any;
   MessageText:string;
+  dataWeatherHistory:DataWeatherHistory[];
+  
 
   constructor(private accuService:AccuRequestService, private appDataService: AppDataService, private route:Router){}
   ngOnInit(){
@@ -38,14 +40,11 @@ export class AppComponent implements OnInit , OnDestroy {
   }
 
   CityChange(newCity:string){
-    console.log('city changed to: '+newCity);
-    
     this.getCityWeatherReport(newCity);
   }
 
   getCityWeatherReport(cityName:string){
     this.accuService.GetTemprature(cityName).subscribe((res)=>{
-      console.log(res)
         this.City=res.location.name;
         this.State=res.location.region;
         this.country=res.location.country;
@@ -58,6 +57,7 @@ export class AppComponent implements OnInit , OnDestroy {
         this.updatedTime=res.current.last_updated
         this.MessageText=res.current.condition.text
         this.DashboardSubData=new DataWeather(this.feels_like,this.wind,this.visibility,this.humidity,this.pressure);
+        this.hourlyRout()
       })
       
   }
@@ -67,11 +67,12 @@ export class AppComponent implements OnInit , OnDestroy {
   }
 
   hourlyRout(){
-    this.route.navigate(['history']);
-
+    this.route.navigate(['history'],{queryParams: {city: this.City}});
   }
 
   ngOnDestroy(){
     this.subScription.unsubscribe();
   }
 }
+
+

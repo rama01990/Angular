@@ -9,14 +9,15 @@ import { InterceptiorService } from './API-intercetor.service';
 import { WeatherDashboardComponent } from './weather-dashboard/weather-dashboard.component';
 import { WeatherSubComponent } from './weather-sub/weather-sub.component';
 import { HistoryDataComponent } from './history-data/history-data.component';
-
+import { SingleDataComponent } from './history-data/single-data/single-data.component';
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     WeatherDashboardComponent,
     WeatherSubComponent,
-    HistoryDataComponent
+    HistoryDataComponent,
+    SingleDataComponent
   ],
   imports: [
     BrowserModule,
