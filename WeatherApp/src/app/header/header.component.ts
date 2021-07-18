@@ -6,7 +6,7 @@ import { AppDataService } from '../App-Data.service';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-
+  @Output() CityChange:EventEmitter<string> = new EventEmitter;
   constructor(private appDataService: AppDataService) { }
 
   @Input() State:string;
@@ -14,6 +14,7 @@ export class HeaderComponent implements OnInit {
   @Input() City:string;
   isCelcis: boolean = true;
   ngOnInit() {
+    let date=new Date().toISOString().slice(0, 10)  ;
   }
 
   CelciusChange(unit:string){
@@ -25,6 +26,9 @@ export class HeaderComponent implements OnInit {
         this.isCelcis = false;
       }
     this.appDataService.UnitChanged(unit);
+  }
+  getStateValues(city:string){    
+    this.CityChange.emit(city);
   }
 
 }

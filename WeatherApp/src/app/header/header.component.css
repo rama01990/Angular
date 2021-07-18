@@ -6,11 +6,12 @@
     background-color: rgb(255, 255, 255, 0.25);
 }
 .SearchInput{
-    width: 20vw;
+    width: 22vw;
     background-color: #363636;
     color: white;
     border-radius: 15px;
     height: 80%;
+    margin-left: 100px;
 }
 input{
     margin-left: 1vw;

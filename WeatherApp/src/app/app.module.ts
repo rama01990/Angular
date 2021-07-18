@@ -7,12 +7,16 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { InterceptiorService } from './API-intercetor.service';
 import { WeatherDashboardComponent } from './weather-dashboard/weather-dashboard.component';
+import { WeatherSubComponent } from './weather-sub/weather-sub.component';
+import { HistoryDataComponent } from './history-data/history-data.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    WeatherDashboardComponent
+    WeatherDashboardComponent,
+    WeatherSubComponent,
+    HistoryDataComponent
   ],
   imports: [
     BrowserModule,

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { AppDataService } from '../App-Data.service';
 
@@ -10,6 +10,7 @@ import { AppDataService } from '../App-Data.service';
 export class WeatherDashboardComponent implements OnInit {
   isCelcius:boolean;
   subScription = new Subscription;
+  @Input() messageText:string;
   constructor( private appDataService: AppDataService){}
   ngOnInit(){
     this.subScription=this.appDataService.UnitChange.subscribe(data =>{

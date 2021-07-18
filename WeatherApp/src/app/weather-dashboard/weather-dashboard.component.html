@@ -1,9 +1,15 @@
 <ng-content></ng-content>
-<div class="MainTemp">
-    <img class="WeatherIcon" src="../../assets/RainShowersNightV2.svg"/>
-    <span class="BigTemp"> 26°</span> 
-    <div class="units">
-       <a [ngClass]="{'flexOrder' : !isCelcius }" (click)="unitChange('C')">C</a>
-       <a [ngClass]="{'flexOrder' : isCelcius }" (click)="unitChange('F')">F</a>
+<div class="Main">
+    <div class="MainTemp">
+        <img class="WeatherIcon" src="../../assets/RainShowersNightV2.svg"/>
+        <span class="BigTemp"> 26°</span> 
+        <div class="units">
+        <a [ngClass]="{'flexOrder' : !isCelcius }" (click)="unitChange('C')">C</a>
+        <a [ngClass]="{'flexOrder' : isCelcius }" (click)="unitChange('F')">F</a>
+        </div>
+    </div>
+    <div class="Message">
+       <p> {{messageText}}</p>
+       Expect scattered rain showers. The low will be 24°.
     </div>
 </div>

@@ -1,0 +1,24 @@
+.Main{
+    display: flex;
+    justify-content: space-between;
+    width:70%
+}
+
+.MainContainer{
+    display:flex;
+    align-items: center;
+    font-size: 16px;
+    color: white;
+}
+.icon{
+    width: 25px;
+    height: 25px;
+}
+.moveleft{
+    margin-left: 15px;
+}
+label,p{
+    margin-right: 20px;
+    text-transform: uppercase;
+    margin:0;
+}
